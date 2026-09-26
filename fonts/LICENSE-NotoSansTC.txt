@@ -1,0 +1,7 @@
+NotoSansTC-VF.ttf — Noto Sans Traditional Chinese
+授權：SIL Open Font License 1.1
+https://fonts.google.com/noto/specimen/Noto+Sans+TC
+
+OFL 允許自由使用、修改、內嵌與隨商業軟體再發布，
+唯一限制是不可單獨販售字型本身、且衍生字型須沿用同一授權。
+遊戲上架時把這個檔案一併附在版權聲明裡即可。

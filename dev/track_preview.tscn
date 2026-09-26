@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cwwqpu8ojgp1w"]
+
+[ext_resource type="Script" path="res://dev/track_preview.gd" id="1_prev"]
+
+[node name="TrackPreview" type="Node"]
+script = ExtResource("1_prev")

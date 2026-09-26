@@ -1,0 +1,111 @@
+{
+  "id": "stage-04",
+  "index": 4,
+  "name": "企鵝灣",
+  "nameEn": "Penguin Bay",
+  "lapLength": 5000,
+  "laps": 2,
+  "length": 10000,
+  "timeLimit": 63,
+  "seed": 20260916,
+  "palette": "day_clear",
+  "prototype": 0,
+  "layout": "simple",
+  "minRadius": 200.0,
+  "rules": {
+    "maxDifficulty": 2,
+    "valleyAfter": 5,
+    "minFish": 30,
+    "clearTail": 400,
+    "targetSlack": 36.0
+  },
+  "weights": {
+    "s_open": 10,
+    "s_flag_run": 10,
+    "s_fish_row": 10,
+    "s_power": 8
+  },
+  "forced": [
+    {
+      "at": 0,
+      "segment": "s_open"
+    },
+    {
+      "at": 300,
+      "segment": "s_flag_run"
+    },
+    {
+      "at": 1250,
+      "segment": "s_open"
+    },
+    {
+      "at": 1550,
+      "segment": "s_flag_run"
+    },
+    {
+      "at": 2500,
+      "segment": "s_open"
+    },
+    {
+      "at": 2800,
+      "segment": "s_flag_run"
+    },
+    {
+      "at": 3750,
+      "segment": "s_open"
+    },
+    {
+      "at": 4050,
+      "segment": "s_flag_run"
+    },
+    {
+      "at": 4700,
+      "segment": "s_power"
+    },
+    {
+      "at": 5000,
+      "segment": "s_open"
+    },
+    {
+      "at": 5300,
+      "segment": "s_fish_row"
+    },
+    {
+      "at": 6100,
+      "segment": "s_open"
+    },
+    {
+      "at": 6400,
+      "segment": "s_fish_row"
+    },
+    {
+      "at": 7200,
+      "segment": "s_open"
+    },
+    {
+      "at": 7500,
+      "segment": "s_fish_row"
+    },
+    {
+      "at": 8300,
+      "segment": "s_open"
+    },
+    {
+      "at": 8600,
+      "segment": "s_fish_row"
+    },
+    {
+      "at": 9500,
+      "segment": "s_power"
+    }
+  ],
+  "stars": {
+    "note": "獎勵關：分數與吃魚數就是成績",
+    "mode": "clean_run"
+  },
+  "flagTrail": false,
+  "terrain": "ice",
+  "pickup": "lingflag",
+  "powerTime": 15,
+  "waving": true
+}

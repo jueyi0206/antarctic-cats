@@ -1,0 +1,77 @@
+{
+  "id": "stage-03",
+  "index": 3,
+  "name": "莫洛傑日納亞",
+  "nameEn": "Molodyozhnaya",
+  "lapLength": 8000,
+  "laps": 2,
+  "length": 16000,
+  "timeLimit": 65,
+  "seed": 20284740,
+  "palette": "storm_dusk",
+  "rules": {
+    "maxDifficulty": 8,
+    "valleyAfter": 5,
+    "minFish": 10,
+    "clearTail": 400,
+    "targetSlack": 5.0
+  },
+  "weights": {
+    "s_open": 9,
+    "s_breather": 10,
+    "s_breather_wide": 10,
+    "s_fish_pond": 10,
+    "s_hole_single": 10,
+    "s_hole_pair": 8,
+    "s_puddle": 10,
+    "s_flag_gate": 5,
+    "s_hole_stair": 5,
+    "s_seal_den": 14,
+    "s_narrow": 7,
+    "s_puddle_pair": 8,
+    "s_puddle_fish": 8,
+    "s_crevasse": 7,
+    "s_blizzard": 6,
+    "s_long_mix": 8,
+    "s_seal_mix": 12,
+    "s_drift_ice": 8,
+    "s_gauntlet": 7,
+    "s_power": 5
+  },
+  "forced": [
+    {
+      "at": 0,
+      "segment": "s_open"
+    },
+    {
+      "at": 3600,
+      "segment": "s_blizzard"
+    },
+    {
+      "at": 8200,
+      "segment": "s_blizzard"
+    },
+    {
+      "at": 12600,
+      "segment": "s_blizzard"
+    },
+    {
+      "at": 5200,
+      "segment": "s_power"
+    },
+    {
+      "at": 11000,
+      "segment": "s_power"
+    }
+  ],
+  "stars": {
+    "note": "三星不看時間，看失誤與吃魚 —— 見 LEVELS.md 第 7 節",
+    "mode": "clean_run"
+  },
+  "layout": "technical",
+  "prototype": 2,
+  "minRadius": 60.0,
+  "flagTrail": true,
+  "terrain": "ice",
+  "pickup": "can"
+}

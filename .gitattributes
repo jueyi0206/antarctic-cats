@@ -1,0 +1,11 @@
+# 統一用 LF，換電腦或換編輯器才不會整份檔案都變成 diff
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.JPG binary
+*.ttf binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.wasm binary
+*.pck binary

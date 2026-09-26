@@ -1,0 +1,52 @@
+{
+  "id": "stage-02",
+  "index": 2,
+  "name": "哈雷灣",
+  "nameEn": "Halley Bay",
+  "lapLength": 7500,
+  "laps": 2,
+  "length": 15000,
+  "timeLimit": 68,
+  "seed": 20276753,
+  "palette": "dusk",
+  "rules": {
+    "maxDifficulty": 6,
+    "valleyAfter": 5,
+    "minFish": 8,
+    "clearTail": 400,
+    "targetSlack": 14.0
+  },
+  "weights": {
+    "s_open": 9,
+    "s_breather": 10,
+    "s_breather_wide": 10,
+    "s_fish_pond": 10,
+    "s_hole_single": 10,
+    "s_hole_pair": 8,
+    "s_puddle": 10,
+    "s_flag_gate": 8,
+    "s_hole_stair": 8,
+    "s_seal_den": 18,
+    "s_narrow": 8,
+    "s_puddle_pair": 8,
+    "s_crevasse": 8,
+    "s_long_mix": 8,
+    "s_seal_mix": 8
+  },
+  "forced": [
+    {
+      "at": 0,
+      "segment": "s_open"
+    }
+  ],
+  "stars": {
+    "note": "三星不看時間，看失誤與吃魚 —— 見 LEVELS.md 第 7 節",
+    "mode": "clean_run"
+  },
+  "layout": "technical",
+  "prototype": 4,
+  "minRadius": 105.0,
+  "flagTrail": true,
+  "terrain": "ice",
+  "pickup": "can"
+}

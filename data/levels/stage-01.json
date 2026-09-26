@@ -1,0 +1,44 @@
+{
+  "id": "stage-01",
+  "index": 1,
+  "name": "昭和基地",
+  "nameEn": "Syowa Station",
+  "lapLength": 7000,
+  "laps": 2,
+  "length": 14000,
+  "timeLimit": 70,
+  "seed": 20268834,
+  "palette": "day_clear",
+  "rules": {
+    "maxDifficulty": 3,
+    "valleyAfter": 5,
+    "minFish": 5,
+    "clearTail": 400,
+    "targetSlack": 24.0
+  },
+  "weights": {
+    "s_open": 14,
+    "s_breather": 10,
+    "s_breather_wide": 10,
+    "s_fish_pond": 10,
+    "s_hole_single": 10,
+    "s_hole_pair": 8,
+    "s_puddle": 10
+  },
+  "forced": [
+    {
+      "at": 0,
+      "segment": "s_open"
+    }
+  ],
+  "stars": {
+    "note": "三星不看時間，看失誤與吃魚 —— 見 LEVELS.md 第 7 節",
+    "mode": "clean_run"
+  },
+  "layout": "simple",
+  "prototype": 0,
+  "minRadius": 135.0,
+  "pickup": "catgrass",
+  "jumper": "vole",
+  "ground": "farm_to_sea"
+}

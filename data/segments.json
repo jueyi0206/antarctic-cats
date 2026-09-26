@@ -1,0 +1,766 @@
+{
+  "$schema": "./segments.schema.json",
+  "units": "u (1u = 1px at scale 1.0)",
+  "trackWidth": 288,
+  "segments": [
+    {
+      "id": "s_open",
+      "length": 300,
+      "difficulty": 0,
+      "tags": [
+        "rest",
+        "runway"
+      ],
+      "elements": [
+        {
+          "type": "cheer",
+          "x": 150,
+          "lane": -1,
+          "offset": -81
+        },
+        {
+          "type": "cheer",
+          "x": 150,
+          "lane": 1,
+          "offset": -81
+        }
+      ]
+    },
+    {
+      "id": "s_fish_pond",
+      "length": 400,
+      "difficulty": 2,
+      "tags": [
+        "hole",
+        "reward"
+      ],
+      "elements": [
+        {
+          "type": "hole_s",
+          "x": 130,
+          "offset": -50,
+          "width": 53,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          }
+        },
+        {
+          "type": "hole_s",
+          "x": 290,
+          "offset": 50,
+          "width": 53,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 1.1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_hole_single",
+      "length": 300,
+      "difficulty": 1,
+      "tags": [
+        "hole"
+      ],
+      "elements": [
+        {
+          "type": "hole_m",
+          "x": 150,
+          "offset": 0,
+          "width": 86
+        }
+      ]
+    },
+    {
+      "id": "s_hole_pair",
+      "length": 400,
+      "difficulty": 2,
+      "tags": [
+        "hole"
+      ],
+      "elements": [
+        {
+          "type": "hole_m",
+          "x": 200,
+          "offset": -60,
+          "width": 86
+        },
+        {
+          "type": "hole_m",
+          "x": 200,
+          "offset": 60,
+          "width": 86
+        }
+      ]
+    },
+    {
+      "id": "s_hole_stair",
+      "length": 500,
+      "difficulty": 3,
+      "tags": [
+        "hole",
+        "weave"
+      ],
+      "elements": [
+        {
+          "type": "hole_s",
+          "x": 100,
+          "offset": -60,
+          "width": 47
+        },
+        {
+          "type": "hole_s",
+          "x": 250,
+          "offset": 0,
+          "width": 47
+        },
+        {
+          "type": "hole_s",
+          "x": 400,
+          "offset": 60,
+          "width": 47
+        }
+      ]
+    },
+    {
+      "id": "s_flag_gate",
+      "length": 520,
+      "difficulty": 2,
+      "tags": [
+        "flag",
+        "rhythm"
+      ],
+      "elements": [
+        {
+          "type": "flag",
+          "x": 130,
+          "offset": -72
+        },
+        {
+          "type": "flag",
+          "x": 130,
+          "offset": 18
+        },
+        {
+          "type": "flag",
+          "x": 390,
+          "offset": 72
+        },
+        {
+          "type": "flag",
+          "x": 390,
+          "offset": -18
+        }
+      ]
+    },
+    {
+      "id": "s_seal_den",
+      "length": 450,
+      "difficulty": 5,
+      "tags": [
+        "hole",
+        "seal",
+        "timing"
+      ],
+      "elements": [
+        {
+          "type": "hole_m",
+          "x": 140,
+          "offset": -50,
+          "width": 86,
+          "seal": {
+            "period": 2.4,
+            "up": 1.0,
+            "phase": 0.0
+          }
+        },
+        {
+          "type": "hole_m",
+          "x": 330,
+          "offset": 50,
+          "width": 86,
+          "seal": {
+            "period": 2.4,
+            "up": 1.0,
+            "phase": 1.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_crevasse",
+      "length": 700,
+      "difficulty": 5,
+      "tags": [
+        "jump",
+        "peak"
+      ],
+      "requires": {
+        "prevTags": [
+          "runway"
+        ],
+        "clearBefore": 350
+      },
+      "elements": [
+        {
+          "type": "crevasse",
+          "x": 380,
+          "width": 140,
+          "fullWidth": true
+        }
+      ]
+    },
+    {
+      "id": "s_narrow",
+      "length": 400,
+      "difficulty": 4,
+      "tags": [
+        "pressure"
+      ],
+      "elements": [
+        {
+          "type": "track_width",
+          "x": 0,
+          "value": 120
+        },
+        {
+          "type": "hole_s",
+          "x": 200,
+          "offset": 0,
+          "width": 47
+        },
+        {
+          "type": "track_width",
+          "x": 400,
+          "value": 180
+        }
+      ]
+    },
+    {
+      "id": "s_drift_ice",
+      "length": 450,
+      "difficulty": 5,
+      "tags": [
+        "moving",
+        "read"
+      ],
+      "elements": [
+        {
+          "type": "ice_block",
+          "x": 150,
+          "offset": -37,
+          "speed": 60,
+          "range": 74
+        },
+        {
+          "type": "ice_block",
+          "x": 330,
+          "offset": 37,
+          "speed": -60,
+          "range": 74
+        }
+      ]
+    },
+    {
+      "id": "s_blizzard",
+      "length": 600,
+      "difficulty": 4,
+      "tags": [
+        "theme"
+      ],
+      "elements": [
+        {
+          "type": "blizzard",
+          "x": 0,
+          "length": 600,
+          "visibility": 0.6,
+          "push": 40
+        },
+        {
+          "type": "hole_s",
+          "x": 180,
+          "offset": -60,
+          "width": 47
+        },
+        {
+          "type": "hole_s",
+          "x": 420,
+          "offset": 60,
+          "width": 47
+        }
+      ]
+    },
+    {
+      "id": "s_gauntlet",
+      "length": 700,
+      "difficulty": 8,
+      "tags": [
+        "hole",
+        "seal",
+        "flag",
+        "peak"
+      ],
+      "requires": {
+        "minStage": 7
+      },
+      "elements": [
+        {
+          "type": "hole_m",
+          "x": 100,
+          "offset": -60,
+          "width": 86,
+          "seal": {
+            "period": 2.0,
+            "up": 0.9,
+            "phase": 0.0
+          }
+        },
+        {
+          "type": "flag",
+          "x": 260,
+          "offset": 0
+        },
+        {
+          "type": "hole_m",
+          "x": 400,
+          "offset": 60,
+          "width": 86,
+          "seal": {
+            "period": 2.0,
+            "up": 0.9,
+            "phase": 1.0
+          }
+        },
+        {
+          "type": "flag",
+          "x": 540,
+          "offset": -37
+        },
+        {
+          "type": "hole_s",
+          "x": 620,
+          "offset": 0,
+          "width": 53,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.4
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_breather",
+      "length": 600,
+      "difficulty": 2,
+      "tags": [
+        "runway"
+      ],
+      "elements": [
+        {
+          "type": "cheer",
+          "x": 250,
+          "offset": -81
+        },
+        {
+          "type": "cheer",
+          "x": 250,
+          "offset": 81
+        }
+      ]
+    },
+    {
+      "id": "s_breather_wide",
+      "length": 600,
+      "difficulty": 2,
+      "tags": [
+        "runway"
+      ],
+      "elements": [
+        {
+          "type": "cheer",
+          "x": 250,
+          "offset": -81
+        },
+        {
+          "type": "cheer",
+          "x": 250,
+          "offset": 81
+        }
+      ]
+    },
+    {
+      "id": "s_long_mix",
+      "length": 800,
+      "difficulty": 5,
+      "tags": [],
+      "elements": [
+        {
+          "type": "hole_m",
+          "x": 300,
+          "offset": -56,
+          "width": 86
+        },
+        {
+          "type": "flag",
+          "x": 520,
+          "offset": 50
+        }
+      ]
+    },
+    {
+      "id": "s_seal_mix",
+      "length": 700,
+      "difficulty": 6,
+      "tags": [
+        "hole",
+        "seal"
+      ],
+      "elements": [
+        {
+          "type": "hole_m",
+          "x": 220,
+          "offset": 37,
+          "width": 86,
+          "seal": {
+            "period": 2.4,
+            "up": 1.0,
+            "phase": 0.0
+          }
+        },
+        {
+          "type": "hole_s",
+          "x": 430,
+          "offset": -43,
+          "width": 53,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.6
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_puddle",
+      "length": 450,
+      "difficulty": 3,
+      "tags": [
+        "hole"
+      ],
+      "elements": [
+        {
+          "type": "hole_l",
+          "x": 220,
+          "offset": -43,
+          "width": 110
+        }
+      ]
+    },
+    {
+      "id": "s_puddle_pair",
+      "length": 800,
+      "difficulty": 5,
+      "tags": [
+        "hole",
+        "weave"
+      ],
+      "elements": [
+        {
+          "type": "hole_l",
+          "x": 190,
+          "offset": -48,
+          "width": 110
+        },
+        {
+          "type": "hole_l",
+          "x": 610,
+          "offset": 52,
+          "width": 110
+        }
+      ]
+    },
+    {
+      "id": "s_puddle_fish",
+      "length": 500,
+      "difficulty": 4,
+      "tags": [
+        "hole",
+        "reward"
+      ],
+      "elements": [
+        {
+          "type": "hole_l",
+          "x": 250,
+          "offset": 37,
+          "width": 110,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "s_flag_run",
+      "length": 950,
+      "difficulty": 1,
+      "tags": [
+        "reward",
+        "runway"
+      ],
+      "elements": [
+        {
+          "type": "cheer",
+          "x": 40,
+          "offset": 0,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 90,
+          "offset": -10,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 140,
+          "offset": -20,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 190,
+          "offset": -30,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 240,
+          "offset": -40,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 290,
+          "offset": -35,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 340,
+          "offset": -25,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 390,
+          "offset": -15,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 440,
+          "offset": -5,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 490,
+          "offset": 5,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 540,
+          "offset": 15,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 590,
+          "offset": 25,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 640,
+          "offset": 35,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 690,
+          "offset": 40,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 740,
+          "offset": 30,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 790,
+          "offset": 20,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 840,
+          "offset": 10,
+          "fixed": true
+        },
+        {
+          "type": "cheer",
+          "x": 890,
+          "offset": 0,
+          "fixed": true
+        }
+      ]
+    },
+    {
+      "id": "s_fish_row",
+      "length": 800,
+      "difficulty": 2,
+      "tags": [
+        "hole",
+        "reward"
+      ],
+      "elements": [
+        {
+          "type": "hole_s",
+          "x": 60,
+          "offset": 26,
+          "width": 56,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          },
+          "fixed": true
+        },
+        {
+          "type": "hole_s",
+          "x": 145,
+          "offset": 45,
+          "width": 56,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          },
+          "fixed": true
+        },
+        {
+          "type": "hole_s",
+          "x": 230,
+          "offset": 38,
+          "width": 56,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          },
+          "fixed": true
+        },
+        {
+          "type": "hole_s",
+          "x": 315,
+          "offset": 8,
+          "width": 56,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          },
+          "fixed": true
+        },
+        {
+          "type": "hole_s",
+          "x": 400,
+          "offset": -26,
+          "width": 56,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          },
+          "fixed": true
+        },
+        {
+          "type": "hole_s",
+          "x": 485,
+          "offset": -45,
+          "width": 56,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          },
+          "fixed": true
+        },
+        {
+          "type": "hole_s",
+          "x": 570,
+          "offset": -38,
+          "width": 56,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          },
+          "fixed": true
+        },
+        {
+          "type": "hole_s",
+          "x": 655,
+          "offset": -8,
+          "width": 56,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          },
+          "fixed": true
+        },
+        {
+          "type": "hole_s",
+          "x": 740,
+          "offset": 26,
+          "width": 56,
+          "fish": {
+            "period": 2.4,
+            "up": 1.6,
+            "phase": 0.0
+          },
+          "fixed": true
+        }
+      ]
+    },
+    {
+      "id": "s_power",
+      "length": 500,
+      "difficulty": 1,
+      "tags": [
+        "rest",
+        "runway"
+      ],
+      "elements": [
+        {
+          "type": "power",
+          "x": 250,
+          "offset": 0,
+          "width": 40
+        }
+      ]
+    }
+  ],
+  "note": "賽道的形狀由 scripts/TrackPath.gd 生成的封閉迴圈決定，積木只負責放障礙。"
+}

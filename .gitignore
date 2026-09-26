@@ -1,0 +1,14 @@
+# Godot 4 快取與匯入產物
+.godot/
+/android/
+
+# 匯出產物
+/build/
+/export/
+
+# Python 快取
+__pycache__/
+*.pyc
+
+# 開發用的截圖（跑 dev/*_shot.tscn 就會重新產生）
+/dev/preview/
