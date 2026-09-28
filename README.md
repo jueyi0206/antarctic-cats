@@ -72,6 +72,7 @@
 | [STORY-PROMPT.md](STORY-PROMPT.md) | 給其他模型寫劇情用的提示詞（兩個版本）|
 | [PROMPTS.md](PROMPTS.md) | 生圖提示詞：三隻貓的設定圖與五張劇情插圖 |
 | [TUNING.md](TUNING.md) | 手感數值的版本紀錄 —— 改壞了要回得去 |
+| [WEB.md](WEB.md) | 網頁版／手機版檢查清單：字型子集、可點的連結、觸控 —— 桌面版測不出來的那三件事 |
 | [AUDIO.md](AUDIO.md) | 音效與音樂：全部程式合成，怎麼改怎麼重生 |
 | `scripts/Constants.gd` | 所有可調的物理常數（autoload `Cfg`） |
 | `scripts/TrackPath.gd` | 賽道形狀：原型控制點 + Catmull-Rom + 等弧長重取樣 |
@@ -84,5 +85,4 @@
 | `dev/validate.tscn` | headless 關卡驗證器 |
 | `dev/track_preview.tscn` | 把每關賽道畫成 PNG 到 `dev/preview/`，看形狀用 |
 
-美術全部是程式畫的向量圖，聲音全部是 python 合成的 wav —— 專案裡沒有任何外來素材檔。
-原型階段換數值比換素材重要。
+要出網頁版或手機版之前，先讀 [WEB.md](WEB.md)。
