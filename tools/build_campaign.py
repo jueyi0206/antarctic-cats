@@ -105,6 +105,13 @@ for no, raw in enumerate(lines, 1):
             chapter["outro_title"] = title
         continue
 
+    if line.startswith("連結："):
+        # 這張圖在網頁版要變成可以點的連結（QR code 那兩頁）。
+        # 手機看自己的螢幕沒辦法掃 QR code，一定要能點
+        if last_img:
+            out["illustrations"][last_img]["link"] = line[3:].strip()
+        continue
+
     if line.startswith("畫面："):
         if last_img:
             out["illustrations"][last_img]["note"] = line[3:]

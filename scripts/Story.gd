@@ -20,6 +20,9 @@ var _revealed := 0.0
 var _illustrations: Dictionary = {}
 var _scene := ""
 var _ended := false
+## 這張插圖可以點開的網址（campaign.json 的 illustrations.link）。
+## 只有網頁版有效 —— 手機沒辦法掃自己螢幕上的 QR code，一定要能點
+var _link := ""
 
 
 func _ready() -> void:
@@ -32,6 +35,11 @@ func _ready() -> void:
 	_illustrations = Flow.campaign.get("illustrations", {})
 	_placeholder.text = ""
 	_advance_line()
+
+
+## 換場景時把疊在畫布上的 HTML 連結收掉，不然它會一直擋著那一塊
+func _exit_tree() -> void:
+	WebLink.hide()
 
 
 func _process(delta: float) -> void:
@@ -108,8 +116,17 @@ func _advance_line() -> void:
 		_ended = true
 		_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_show_scene(str(line.get("scene", "")))
-	if _ended:
+	# 擺在 _show_scene 後面：要等它決定完這一頁有沒有連結，提示才講得對
+	var touch := DisplayServer.is_touchscreen_available()
+	if _ended and _link != "":
+		_hint.text = "—　全劇終　—　點上面的圖，直接打開"
+	elif _ended:
 		_hint.text = "—　全劇終　—　（按 R 再玩一次）"
+	elif _link != "":
+		# 圖被 HTML 連結蓋住了，翻頁要點文字框那一半
+		_hint.text = "點圖直接打開　·　點下面的文字框繼續" if touch 			else "點圖直接打開　·　Enter 繼續"
+	elif touch:
+		_hint.text = "點一下　繼續"
 	else:
 		_hint.text = "Enter / 空白鍵　繼續　·　Esc 跳過"
 
@@ -119,6 +136,12 @@ func _show_scene(id: String) -> void:
 		return
 	_scene = id
 	var info: Dictionary = _illustrations.get(id, {})
+	# 網頁版才掛連結：在畫布上疊一個真的 HTML <a>，手機才點得開（見 WebLink.gd）
+	_link = str(info.get("link", "")) if OS.has_feature("web") else ""
+	if _link != "":
+		WebLink.show(_link, $Frame.get_global_rect())
+	else:
+		WebLink.hide()
 	var path := str(info.get("image", ""))
 	if path != "" and ResourceLoader.exists(path):
 		_art.texture = load(path)

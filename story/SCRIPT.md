@@ -259,11 +259,13 @@
 
 【圖示 8：來玩喔】
 畫面：FB 粉專的 QR code（art/story/ending_08.png，用 ../pinball/tools/make_qr.py 產生）。
+連結：https://www.facebook.com/profile.php?id=100063882136906
 旁白：歡迎來「日日暖暖貓之窩」，認識可愛的貓貓們！
 旁白：掃描上面的 QR code，就能看到我們的 FB 粉專。
 
 【圖示 9：追蹤我們】
 畫面：IG 的 QR code（art/story/ending_09.png）。
+連結：https://www.instagram.com/catwarmhouse
 旁白：也歡迎追蹤我們的 IG，看貓貓的日常。
 
 本章圖示整理（共 5 張）：

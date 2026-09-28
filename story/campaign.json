@@ -115,12 +115,14 @@
     "ending_08": {
       "image": "res://art/story/ending_08.png",
       "title": "來玩喔",
-      "note": "FB 粉專的 QR code（art/story/ending_08.png，用 ../pinball/tools/make_qr.py 產生）。"
+      "note": "FB 粉專的 QR code（art/story/ending_08.png，用 ../pinball/tools/make_qr.py 產生）。",
+      "link": "https://www.facebook.com/profile.php?id=100063882136906"
     },
     "ending_09": {
       "image": "res://art/story/ending_09.png",
       "title": "追蹤我們",
-      "note": "IG 的 QR code（art/story/ending_09.png）。"
+      "note": "IG 的 QR code（art/story/ending_09.png）。",
+      "link": "https://www.instagram.com/catwarmhouse"
     }
   },
   "chapters": [
